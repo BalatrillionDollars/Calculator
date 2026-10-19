@@ -1,0 +1,29 @@
+body{
+    background-color: #707372ff;
+    font-size: 16pt;
+    font-family: "Comic Sans MS";
+    .calculator{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        text-align: center;
+        border: 4pt solid black;
+        .number{
+            color: #54585a;
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+        .func-small{
+            color: white;
+            background-color: #514689ff;
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        .func-large{
+            color: white;
+            background-color: #514689ff;
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+    }
+}
