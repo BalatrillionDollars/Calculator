@@ -1,17 +1,36 @@
 body{
-    background-color: #707372ff;
     font-size: 16pt;
     font-family: "Comic Sans MS";
     .calculator{
+        justify-self: center;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         text-align: center;
-        border: 4pt solid black;
+        #displayBarA{
+            grid-column: span 3;
+            grid-row: span 1;
+            text-align: left;
+            background-color: #9bbc0fff;
+            color: black;
+            margin: 0;
+            width: 80%;
+        }
+        #displayBarB{
+            grid-column: span 3;
+            grid-row: span 1;
+            text-align: right;
+            background-color: #9bbc0fff;
+            color: black;
+            margin: 0;
+            width: 80%;
+        }
         .number{
             color: #54585a;
+            background-color: #a7a4e0ff;
             grid-column: span 1;
             grid-row: span 2;
+            border-radius: 5px;
         }
         .func-small{
             color: white;
@@ -25,5 +44,10 @@ body{
             grid-column: span 1;
             grid-row: span 2;
         }
+        input{
+            grid-column: span 3;
+            grid-row: span 1;
+        }
+        background-color: #707372ff;
     }
 }

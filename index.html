@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="stylesheet" href="style.css">
     <script src = "index.js"></script>
     <meta charset="UTF-8">
     <title>LM-XX</title>
 </head>
-<body>
+<body onload = "loading();">
     <div class = "calculator">
-        <p class = "number">1</p>
-        <p class = "number">2</p>
-        <p class = "number">3</p>
-        <p class = "number">4</p>
-        <p class = "number">5</p>
-        <p class = "number">6</p>
-        <p class = "number">7</p>
-        <p class = "number">8</p>
-        <p class = "number">9</p>
-        <p class = "number">9</p>
-        <p class = "number">0</p>
+        <p id = "displayBarA">0</p>
+        <p id = "displayBarB">0</p>
+        <button onclick = "add('1');" class = "number">1</button>
+        <button onclick = "add('2');" class = "number">2</button>
+        <button onclick = "add('3');" class = "number">3</button>
+        <button onclick = "add('4');" class = "number">4</button>
+        <button onclick = "add('5');" class = "number">5</button>
+        <button onclick = "add('6');" class = "number">6</button>
+        <button onclick = "add('7');" class = "number">7</button>
+        <button onclick = "add('8');" class = "number">8</button>
+        <button onclick = "add('9');" class = "number">9</button>
+        <button onclick = "add('.');" class = "func-large">.</button>
+        <button onclick = "add('0');" class = "number">0</button>
+        <button onclick = "evaluate();" class = "func-small">=</button>
+        <input type = "text"></input>
     </div>
 </body>
 </html>
