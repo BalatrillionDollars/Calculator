@@ -1,3 +1,4 @@
+let i = JSON.parse(sessionStorage.getItem("history")).length - 1;
 function loading(){
     const stored = sessionStorage.getItem('history');
     if(stored){
@@ -8,26 +9,27 @@ function loading(){
         sessionStorage.setItem("history", JSON.stringify(equations));
     }
 }
-let i = sessionStorage.getItem("history").length;
 function add(a){
     document.getElementById("in").value += a;
 }
 function ev(){
     let tempEq = document.getElementById("in").value;
-    document.getElementById("out").innerText = eval(tempEq);
+    document.getElementById('out').innerText = eval(tempEq);
     equations.push(tempEq);
     sessionStorage.setItem("history", JSON.stringify(equations));
+    i++;
 }
 function arrow(a){
-    if(!document.getElementById("out").value === equations[i]){
-        document.getElementById("out").value = equations[i];
+    if(!document.querySelector('input').value === equations[i]){
+        document.querySelector('input').value = equations[i];
     }
-    if(equations[i+a]){
+    if(i+a < equations.length && i+a >= 0){
         i += a;
-        document.getElementById("in").value = equations[i+a];
+        document.querySelector('input').value = equations[i];
     }
-    else if (i + a === equations.length){
-        i += a;
-        document.getElementById("in").value = "";
+    else if (i+a > equations.length){
+        document.querySelector('input').value = "";
+        document.getElementById('out').innerText = "";
     }
+
 }
