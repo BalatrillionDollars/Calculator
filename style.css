@@ -1,53 +1,93 @@
 body{
     font-size: 16pt;
     font-family: "Comic Sans MS";
-    .calculator{
-        justify-self: center;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        text-align: center;
-        #displayBarA{
-            grid-column: span 3;
-            grid-row: span 1;
-            text-align: left;
-            background-color: #9bbc0fff;
-            color: black;
-            margin: 0;
-            width: 80%;
-        }
-        #displayBarB{
-            grid-column: span 3;
-            grid-row: span 1;
-            text-align: right;
-            background-color: #9bbc0fff;
-            color: black;
-            margin: 0;
-            width: 80%;
-        }
-        .number{
-            color: #54585a;
-            background-color: #a7a4e0ff;
-            grid-column: span 1;
-            grid-row: span 2;
-            border-radius: 5px;
-        }
-        .func-small{
-            color: white;
-            background-color: #514689ff;
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-        .func-large{
-            color: white;
-            background-color: #514689ff;
-            grid-column: span 1;
-            grid-row: span 2;
-        }
-        input{
-            grid-column: span 3;
-            grid-row: span 1;
-        }
-        background-color: #707372ff;
+    background-color: #707372ff;
+    button{
+        border-radius: 5px;
     }
+    button:hover{
+        cursor: pointer;
+    }
+    .calculator{
+        #display{
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+            margin: 10px;
+            justify-self: center;
+            text-align: center;
+            background-color: #9bbc0fff;
+            #in{
+                text-align: left;
+                background-color: transparent;
+                color: black;
+                border: none;
+                width: 100%;
+                height: 14px;
+                margin: 0;
+            }
+            #out{
+                text-align: right;
+                color: black;
+                width: 100%;
+                height: 18px;
+            }
+        }
+        #grid{
+            justify-self: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            text-align: center;
+            width: 100px;
+            gap: 10px;
+            .number{
+                color: #54585a;
+                background-color: #a7a4e0ff;
+                grid-column: span 1;
+                grid-row: span 3;
+            }
+            .func-S{
+                color: white;
+                background-color: #514689ff;
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+            .func-M{
+                color: white;
+                background-color: #514689ff;
+                grid-column: span 1;
+                grid-row: span 3;
+            }
+            .func-L{
+                color: white;
+                background-color: #514689ff;
+                grid-column: span 1;
+                grid-row: span 5;
+            }
+            #name{
+                grid-column: span 1;
+                grid-row: span 5;
+                color: white;
+                font-size: 5px;
+            }
+        }
+        .arrow{
+            position: fixed;
+            top: 50px;
+            width: 15px;
+            height: 10px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        #arrowL{
+            left: 250px;
+        }
+        #arrowR{
+            right: 250px;
+        }
+    }
+
 }

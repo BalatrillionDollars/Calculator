@@ -1,24 +1,33 @@
 function loading(){
-    if (!localStorage.getItem("history")) {
-        hist = [];
+    const stored = sessionStorage.getItem('history');
+    if(stored){
+        equations = JSON.parse(stored);
     }
-    if (!localStorage.getItem("eq")){
-        eq = "";
+    else{
+        equations = []
+        sessionStorage.setItem("history", JSON.stringify(equations));
     }
 }
-let hist = localStorage.getItem("history");
-let eq = localStorage.getItem("eq");
+let i = sessionStorage.getItem("history").length;
 function add(a){
-    eq = eq + a;
-    document.getElementById("displayBarB").innerText = eq;
+    document.getElementById("in").value += a;
 }
-function evaluate(){
-    eq = document.querySelector("input").value;
-    hist.push(eq);
-    let ev = eval(eq)
-    hist.push(ev);
-    document.getElementById("displayBarA").innerText = ev;
-    document.querySelector("input").value = "";
-    localStorage.setItem("history", hist);
-
+function ev(){
+    let tempEq = document.getElementById("in").value;
+    document.getElementById("out").innerText = eval(tempEq);
+    equations.push(tempEq);
+    sessionStorage.setItem("history", JSON.stringify(equations));
+}
+function arrow(a){
+    if(!document.getElementById("out").value === equations[i]){
+        document.getElementById("out").value = equations[i];
+    }
+    if(equations[i+a]){
+        i += a;
+        document.getElementById("in").value = equations[i+a];
+    }
+    else if (i + a === equations.length){
+        i += a;
+        document.getElementById("in").value = "";
+    }
 }
