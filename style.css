@@ -17,27 +17,29 @@ body{
             display: flex;
             flex-direction: column;
             width: 16vw;
-            height: 10vh;
             margin: 10px;
             justify-self: center;
             text-align: center;
             background-color: #9bbc0fff;
             #in{
+                display: flex;
                 text-align: left;
                 background-color: transparent;
                 color: black;
                 border: none;
                 width: 100%;
-                font-size: 2.5vw;
-                height: 10vh;
                 margin: 0;
+                font-size: 20%;
             }
-            #out{
+            div{
                 text-align: right;
                 color: black;
-                width: 100%;
-                font-size: 3vw;
-                height: 2vh;
+                font-size: 30%;
+                p{
+                    text-align: right;
+                    color: black;
+                    font-size: 30%;
+                }
             }
         }
         #grid{
