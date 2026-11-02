@@ -1,8 +1,9 @@
 body{
     font-size: 5vw;
-    font-family: "Comic Sans MS";
     background-color: #707372ff;
     button{
+        font-family: "Cambria Math";
+        font-size: 25px;
         border-radius: 5px;
         border: none;
     }
@@ -12,16 +13,18 @@ body{
     .calculator{
         position: absolute;
         top: 10vh;
-        right: 42vw;
+        right: 41vw;
         #display{
             display: flex;
             flex-direction: column;
-            width: 16vw;
+            width: 16rem;
+            height: 7.5rem;
             margin: 10px;
             justify-self: center;
             text-align: center;
             background-color: #9bbc0fff;
             #in{
+                font-family: "Cambria Math";
                 display: flex;
                 text-align: left;
                 background-color: transparent;
@@ -29,19 +32,18 @@ body{
                 border: none;
                 width: 100%;
                 margin: 0;
-                font-size: 20%;
+                font-size: 1.5rem;
             }
             div{
+                display: block;
                 text-align: right;
                 color: black;
-                font-size: 30%;
+                width: 100%;
+                height: 0.6rem;
                 p{
-                    
                     text-align: right;
                     color: black;
-                    font-size: 90%;
-                    width: 100%;
-                    height: 100%;
+                    font-size: 2.5rem;
                 }
             }
         }
@@ -51,8 +53,8 @@ body{
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
             text-align: center;
-            width: 14vw;
-            height: 60vh;
+            width: 14rem;
+            height: 30rem;
             gap: 10px;
             .number{
                 color: #54585a;
@@ -79,17 +81,18 @@ body{
                 grid-row: span 3.5;
             }
             #name{
+                font-family: "Cambria Math";
                 grid-column: span 1;
                 grid-row: span 3.5;
                 color: white;
-                font-size: 1vw;
+                font-size: 1rem;
             }
         }
         .arrow{
-            position: fixed;
-            top: 22.5vh;
-            width: 5vw;
-            height: 5vh;
+            position: absolute;
+            top: 17.5vh;
+            width: 5rem;
+            height: 2.5rem;
             background-color: transparent;
             img{
                 width: 100%;
@@ -97,10 +100,10 @@ body{
             }
         }
         #arrowL{
-            left: 35vw;
+            right: 17.5rem;
         }
         #arrowR{
-            right: 35vw;
+            left: 17.5rem;
         }
     }
 
